@@ -32,8 +32,8 @@ const TodoForm = ({addNewTodo}) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {error && <h4 id="error">{error}</h4>}
+    <form onSubmit={handleSubmit} data-test="todo-form">
+      {error && <h4 id="error" data-test="form-error">{error}</h4>}
       <div className="form-group">
         <input
           value={text}

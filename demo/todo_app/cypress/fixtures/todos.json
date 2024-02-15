@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "task": "Collect a Power Star",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "task": "Rescue Princess Peach",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "task": "Find a secret warp pipe",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "task": "Break a Brick Block",
+    "completed": false
+  }
+]

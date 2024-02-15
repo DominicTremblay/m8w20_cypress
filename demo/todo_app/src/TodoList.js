@@ -6,7 +6,7 @@ const TodoList = ({todos, deleteTodo, checkTodo}) => {
   const todoList = todos.map(todo => <TodoListItem key={todo.id} {...todo} deleteTodo={deleteTodo} checkTodo={checkTodo}/>)
   
   return (
-    <ul className="list-group">
+    <ul className="list-group" data-test="todo-list">
       {todoList}
     </ul>
   )

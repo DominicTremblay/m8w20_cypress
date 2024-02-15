@@ -23,32 +23,31 @@ const App = () => {
 
     setTodos((prev) => [...todos, newTodo]);
 
-    // axios({
-    //   method: 'POST',
-    //   url: '/api/todos',
-    //   data: newTodo,
-    // })
-    //   .then((result) => {
-    //     // add the new todo to the state
-    //     setTodos((prev) => [...todos, result.data]);
-    //     console.log(result.data);
-    //   })
-    //   .catch((err) => console.log(err.message));
+    axios({
+      method: 'POST',
+      url: '/api/todos',
+      data: newTodo,
+    })
+      .then((result) => {
+        // add the new todo to the state
+        setTodos((prev) => [...todos, result.data]);
+        console.log(result.data);
+      })
+      .catch((err) => console.log(err.message));
   };
 
   const deleteTodo = (id) => {
-
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
-    // axios({
-    //   method: 'DELETE',
-    //   url: `/api/todos/${id}`,
-    // })
-    //   .then((result) => {
-    //     const updatedTodos = todos.filter((todo) => todo.id !== id);
-    //     setTodos(updatedTodos);
-    //   })
-    //   .catch((err) => console.log(err.message));
+    axios({
+      method: 'DELETE',
+      url: `/api/todos/${id}`,
+    })
+      .then((result) => {
+        const updatedTodos = todos.filter((todo) => todo.id !== id);
+        setTodos(updatedTodos);
+      })
+      .catch((err) => console.log(err.message));
   };
 
   const checkTodo = (id) => {
@@ -66,7 +65,7 @@ const App = () => {
 
   return (
     <div className="App container">
-      <h1>Mario's Todos</h1>
+      <h1 data-test="app-title">Mario's Todos</h1>
       <TodoList todos={todos} deleteTodo={deleteTodo} checkTodo={checkTodo} />
       <TodoForm addNewTodo={addNewTodo} />
     </div>

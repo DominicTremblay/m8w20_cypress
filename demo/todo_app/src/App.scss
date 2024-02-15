@@ -1,0 +1,25 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.container {
+
+  width: 24rem;
+  padding: 2rem;
+
+  background-color: #fff;
+  border-radius: 15px;
+  h1 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+}

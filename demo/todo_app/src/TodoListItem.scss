@@ -1,0 +1,43 @@
+.list-group-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.list-group-item label {
+  margin: 0;
+}
+
+// .remove-todo {
+//   border-radius: 50%;
+//   &:hover {
+//     background-color: cornflowerblue;
+//   }
+// }
+
+.list-group-item > .task-group > input[type=checkbox]:checked ~ label {
+  text-decoration: line-through solid red;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.remove-todo {
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-todo:hover {
+  background-color: #c9302c;
+}

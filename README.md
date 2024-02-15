@@ -5,12 +5,11 @@
 * What is Cypress
 * Cypress Setup
 * Cypress Tests
-  * First Tests
-  * Form Validation
-  * Network Request
-  * Performing actions on Todos
-  * Search
-
+  + First Tests
+  + Form Validation
+  + Network Request
+  + Performing actions on Todos
+  + Search
 
 ## What is Cypress?
 
@@ -20,10 +19,25 @@
 
 ### Recap of types of test
 
-* Unit tests, integrations tests, end-to-end tests
-* end-to-end tests are usually slower than unit tests
+### Recap of Types of Tests
+
+* **Unit Tests**: These are used to test individual components or functions in isolation. They are typically fast to run and are useful for catching low-level bugs.
+
+* **Integration Tests**: These tests check how multiple components or functions work together. They are useful for catching issues that might arise when different parts of your system interact.
+
+* **End-to-End Tests**: These tests simulate real user scenarios. They cover the entire application from start to finish, testing the system as a whole. They are usually slower than unit and integration tests, but they provide the most accurate representation of user interactions.
 
 ## Cypress Setup
+
+To install Cypress for your app
+
+`npm install -g cypress@9.7.0`
+
+Note for WSL users:
+
+- You need to install a X Server to be able to run Cypress in a browser
+- There is a Compass activity explaining the installation
+
 
 When running Cypress:
 
@@ -37,7 +51,7 @@ When running Cypress:
 
 * Cypress syntax should feel very familiar
 * Cypress uses the same syntax as Mocha and Chai
-  + Same `describe`,          `it`, and `beforeEach` blocks, 
+  + Same `describe`,           `it`, and `beforeEach` blocks, 
   + `cy` object with methods. It's asynchronous.
 * Create same selectors as in `jQuery`
 * Chaining of methods
@@ -58,7 +72,7 @@ When running Cypress:
 * `cy.visit(url)` Tell Cypress to visit a page (relative to baseUrl)
 * `cy.get` to create any selectors
 * `cy.contains` to check if a string is on the page
-* `should('exist')`,        `should('not.exist')`
+* `should('exist')`,         `should('not.exist')`
 * `cy.wrap()` This allows you to use Cypress's chainable methods on entities that are not originally Cypress chainable objects. It also creates a closure.
 * `cy.get(selector).as('alias')` Using alias. it creates an object. Needs invoke (method) or its (properties). useful to put these selectors in a beforeEach block
 
@@ -116,5 +130,3 @@ cy.intercept('/not-found', {
 ```
 
 ## Testing Search
-
-
